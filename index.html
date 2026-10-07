@@ -890,7 +890,446 @@ button {
     }
 }
 
+
+/* ===== MODERN APP UI ===== */
+:root{
+  --bg:#f4f7fb;
+  --panel:#ffffff;
+  --panel2:#f8fafc;
+  --border:#e6ebf2;
+  --text:#17202a;
+  --muted:#7b8794;
+  --green:#20c978;
+  --green2:#0f9f5a;
+  --red:#ff5b6e;
+  --red2:#e4475a;
+  --blue:#5b9df9;
+  --blue2:#397fe8;
+  --gold:#f4b940;
+  --shadow:0 8px 26px rgba(31,50,72,.08);
+}
+html{background:var(--bg)}
+body{
+  background:linear-gradient(180deg,#f7f9fc 0%,#eef3f8 100%);
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  padding-bottom:24px;
+}
+header{
+  position:sticky;top:0;z-index:50;
+  padding:14px 24px;
+  background:rgba(255,255,255,.92)!important;
+  border-bottom:1px solid #e9eef4!important;
+  backdrop-filter:blur(16px);
+  box-shadow:0 3px 18px rgba(28,43,58,.05)!important;
+}
+.header-inner{max-width:1180px;margin:auto}
+.brand{gap:12px}
+.logo{
+  width:44px!important;height:44px!important;border-radius:14px!important;
+  display:grid!important;place-items:center;
+  background:linear-gradient(145deg,#65a8ff,#4388ee)!important;
+  box-shadow:0 8px 18px rgba(67,136,238,.22);
+}
+.brand h1{font-size:20px!important;letter-spacing:-.5px;color:#17202a!important}
+.subtitle{color:#8b96a3!important;font-size:11px!important}
+.header-actions{gap:7px}
+.btn{
+  border:1px solid #e2e8ef!important;
+  background:#fff!important;color:#536171!important;
+  border-radius:12px!important;
+  box-shadow:0 3px 10px rgba(28,43,58,.05)!important;
+  transition:.16s ease!important;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 15px rgba(28,43,58,.08)!important}
+.btn.primary{
+  background:linear-gradient(135deg,#20cb78,#14ad62)!important;
+  border-color:transparent!important;color:#fff!important;
+  box-shadow:0 7px 17px rgba(20,173,98,.2)!important;
+}
+.btn.blue{background:#eef5ff!important;border-color:#dceaff!important;color:#3f82e9!important}
+.btn.danger{background:#fff1f3!important;border-color:#ffd9df!important;color:#e4475a!important}
+main{max-width:1180px!important;padding:24px!important}
+.setup{min-height:calc(100vh - 100px);display:grid;place-items:center}
+.setup-card{
+  width:min(760px,100%);padding:30px!important;
+  background:#fff!important;border:1px solid #e7edf4!important;
+  border-radius:24px!important;box-shadow:var(--shadow)!important;
+}
+.setup-title{font-size:28px!important;color:#17202a!important;letter-spacing:-.8px}
+.setup-desc{color:#7d8996!important;line-height:1.6}
+.field label{color:#788594!important;font-weight:800!important;font-size:10px!important;letter-spacing:.08em}
+input,select{
+  background:#f8fafc!important;color:#26313c!important;
+  border:1px solid #e1e8ef!important;border-radius:12px!important;
+  box-shadow:inset 0 1px 2px rgba(25,45,65,.025)!important;
+}
+input:focus,select:focus{border-color:#8db8fb!important;box-shadow:0 0 0 3px rgba(91,157,249,.12)!important}
+.player-top{gap:12px!important}
+.panel,.stat-card,.setup-card{
+  background:rgba(255,255,255,.98)!important;
+  border:1px solid #e5ebf2!important;
+  border-radius:18px!important;
+  box-shadow:var(--shadow)!important;
+}
+.player-card{padding:16px!important}
+.player-avatar{
+  background:linear-gradient(145deg,#65a8ff,#397fe8)!important;
+  box-shadow:0 7px 18px rgba(57,127,232,.2)!important;
+}
+.player-name{color:#17202a!important}
+.player-meta,.stat-note{color:#8a96a3!important}
+.rating-box{
+  background:linear-gradient(145deg,#eef6ff,#fff)!important;
+  border-color:#dceaff!important;
+}
+.rating-label{color:#7e8b99!important}
+.rating{color:#2479e7!important;text-shadow:none!important}
+.rating.good{color:#13aa61!important}.rating.bad{color:#e4475a!important}.rating.neutral{color:#2479e7!important}
+.kpis{gap:12px!important}
+.stat-card{padding:16px!important;border-radius:16px!important}
+.stat-label{color:#87929f!important;font-weight:750!important}
+.stat-value{color:#17202a!important;font-weight:900!important;letter-spacing:-.5px}
+.scouting-grid{gap:12px!important}
+.panel{padding:16px!important}
+.panel-title{border-bottom:1px solid #eef2f6;padding-bottom:11px;margin-bottom:12px}
+.panel-title h2{color:#202b36!important;font-size:15px!important}
+.panel-title span{color:#9aa5b0!important}
+.action-list{gap:8px!important}
+.action{
+  min-height:52px!important;padding:9px 11px!important;
+  border-radius:13px!important;
+  background:#f8fafc!important;
+  border:1px solid #e8edf3!important;
+  box-shadow:none!important;
+  transition:transform .12s,box-shadow .12s,border-color .12s,background .12s!important;
+}
+.action:hover{transform:translateY(-1px);box-shadow:0 5px 13px rgba(30,48,67,.06)!important}
+.action.positive{background:#f1fbf6!important;border-color:#d7f2e4!important}
+.action.negative{background:#fff4f5!important;border-color:#ffe0e4!important}
+.action-icon{border-radius:9px!important}
+.action-name{color:#34414d!important;font-weight:750!important}
+.action-help{color:#9aa5b0!important}
+.action-count{background:#fff!important;color:#44515e!important;border:1px solid #e4eaf0!important}
+.action.positive .action-count{background:#168f52!important;color:#fff!important;border-color:#1fb968!important;font-weight:900!important}
+.action.negative .action-count{background:#b52d3c!important;color:#fff!important;border-color:#e4475a!important;font-weight:900!important}
+.dribble-box{background:#f7fafc!important;border:1px solid #e7edf3!important;border-radius:15px!important}
+.dribble-percent{color:#20ad69!important}
+.progress{background:#e7edf2!important}.progress i{background:linear-gradient(90deg,#24cb79,#5aa4fa)!important}
+.summary-row{border-bottom:1px solid #edf1f5!important;color:#4a5662!important}
+.event-card,.saved-item{background:#fff!important;border:1px solid #e7edf3!important;box-shadow:0 4px 14px rgba(30,48,67,.04)!important;border-radius:13px!important}
+.event-name,.saved-name{color:#27333f!important}
+.event-time,.saved-date{color:#9aa5b0!important}
+.empty{color:#98a3ae!important;background:#f8fafc!important;border-radius:13px!important}
+.toast{background:#17212c!important;border-radius:12px!important;box-shadow:0 10px 25px rgba(0,0,0,.15)!important}
+.modal{background:rgba(20,31,43,.42)!important;backdrop-filter:blur(5px)}
+.modal-card{background:#fff!important;border:1px solid #e5ebf2!important;border-radius:20px!important;box-shadow:0 20px 50px rgba(20,35,50,.18)!important}
+.close{background:#f1f4f7!important;color:#667381!important;border-radius:10px!important}
+
+/* mobile app feel */
+@media(max-width:720px){
+  body{padding-bottom:78px}
+  header{padding:10px 12px}
+  .header-inner{display:flex;align-items:center}
+  .brand{flex:1;min-width:0}
+  .logo{width:38px!important;height:38px!important;border-radius:12px!important}
+  .brand h1{font-size:17px!important}
+  .subtitle{font-size:9px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .header-actions{display:flex!important;gap:5px!important}
+  .header-actions .btn{font-size:0!important;width:34px!important;height:34px!important;padding:0!important;display:grid!important;place-items:center}
+  .header-actions .btn:first-child::before{content:"💾";font-size:15px}
+  .header-actions .btn.blue::before{content:"ⓘ";font-size:16px}
+  .header-actions .btn.danger::before{content:"＋";font-size:19px}
+  main{padding:11px!important}
+  .setup{min-height:calc(100vh - 90px);align-items:start;padding-top:18px}
+  .setup-card{padding:19px!important;border-radius:20px!important}
+  .setup-title{font-size:23px!important}
+  .setup-desc{font-size:12px!important}
+  .form-grid{gap:9px!important}
+  .player-top{grid-template-columns:1fr!important}
+  .player-card{padding:13px!important}
+  .rating-box{padding:14px!important;display:flex;align-items:center;justify-content:space-between}
+  .rating{font-size:38px!important}
+  .kpis{grid-template-columns:repeat(2,1fr)!important;gap:8px!important}
+  .stat-card{padding:12px!important;border-radius:15px!important}
+  .stat-value{font-size:19px!important}
+  .stat-label{font-size:9px!important}
+  .stat-note{font-size:9px!important}
+  .scouting-grid{grid-template-columns:1fr!important;gap:10px!important}
+  .scouting-grid>.summary-panel{grid-column:auto!important}
+  .panel{padding:12px!important;border-radius:16px!important}
+  .panel-title{margin-bottom:9px!important}
+  .panel-title h2{font-size:14px!important}
+  .panel-title span{font-size:9px!important}
+  .action{min-height:48px!important;padding:8px!important}
+  .action-name{font-size:11.5px!important}
+  .action-help{font-size:9px!important}
+  .action-icon{width:26px!important;height:26px!important}
+  .action-count{min-width:25px!important;height:25px!important}
+  .summary-list{max-height:none!important}
+  .event-section,.saved{margin-top:10px!important}
+  .form-actions{grid-template-columns:1fr!important}
+}
+
+/* bottom navigation inspired by modern activity apps */
+.mobile-nav{display:none}
+@media(max-width:720px){
+ .mobile-nav{
+   position:fixed;left:10px;right:10px;bottom:10px;z-index:100;
+   display:grid;grid-template-columns:repeat(4,1fr);gap:4px;
+   padding:7px;background:rgba(255,255,255,.94);
+   border:1px solid #e3e9ef;border-radius:18px;
+   box-shadow:0 12px 30px rgba(25,45,65,.14);backdrop-filter:blur(14px);
+ }
+ .mobile-nav button{border:0;background:transparent;color:#8b97a3;font-size:9px;font-weight:800;padding:7px 3px;border-radius:12px}
+ .mobile-nav button span{display:block;font-size:17px;line-height:18px;margin-bottom:2px}
+ .mobile-nav button.active{background:#edf6ff;color:#3d83e8}
+}
+
+
+/* ===== POLISHED SCOUT UI ===== */
+:root{
+    --bg:#061018;
+    --panel:#0d1822;
+    --panel2:#111f2b;
+    --border:rgba(154,190,214,.16);
+    --text:#f7fbff;
+    --muted:#91a5b5;
+    --green:#19d889;
+    --greenSoft:rgba(25,216,137,.13);
+    --red:#ff5364;
+    --redSoft:rgba(255,83,100,.12);
+    --blue:#4da3ff;
+    --blueSoft:rgba(77,163,255,.13);
+    --purple:#9a78ff;
+    --gold:#ffd45a;
+    --shadow:0 20px 55px rgba(0,0,0,.30);
+}
+body{
+    background:
+      radial-gradient(circle at 10% -5%,rgba(25,216,137,.12),transparent 27%),
+      radial-gradient(circle at 92% 0%,rgba(77,163,255,.12),transparent 25%),
+      linear-gradient(180deg,#07111a 0%,#061018 55%,#08121b 100%);
+    letter-spacing:.05px;
+}
+header{
+    padding:15px 28px;
+    background:rgba(6,15,23,.86);
+    border-bottom:1px solid rgba(154,190,214,.12);
+    box-shadow:0 8px 35px rgba(0,0,0,.18);
+}
+.logo{
+    border-radius:16px;
+    background:linear-gradient(145deg,#1de293,#08754c);
+    box-shadow:0 10px 30px rgba(25,216,137,.22);
+}
+h1{font-size:23px;font-weight:900;letter-spacing:-.5px}
+.subtitle{font-size:12px}
+.btn{
+    min-height:42px;
+    border-radius:13px;
+    background:#12202c;
+    border-color:rgba(154,190,214,.16);
+    box-shadow:0 7px 18px rgba(0,0,0,.16);
+}
+.btn.primary{
+    background:linear-gradient(135deg,#1ee294,#0ebd72);
+    box-shadow:0 9px 25px rgba(25,216,137,.18);
+}
+.player-top{gap:14px}
+.player-card{
+    min-height:130px;
+    padding:20px;
+    border-radius:22px!important;
+    background:
+      radial-gradient(circle at 90% 10%,rgba(25,216,137,.10),transparent 35%),
+      linear-gradient(145deg,#112330,#0b1721)!important;
+    border:1px solid rgba(25,216,137,.20)!important;
+}
+.player-avatar{
+    width:82px;height:82px;
+    background:linear-gradient(145deg,#22d98b,#08633e)!important;
+    border:3px solid rgba(25,216,137,.75);
+    box-shadow:0 0 0 5px rgba(25,216,137,.07),0 12px 30px rgba(0,0,0,.28);
+}
+.player-name{font-size:29px;letter-spacing:-.8px}
+.player-meta{font-size:13px;color:#9db0bf}
+.rating-box{
+    min-width:190px;
+    border-radius:22px!important;
+    background:linear-gradient(145deg,#122d25,#0b1d18)!important;
+    border:1px solid rgba(25,216,137,.25)!important;
+}
+.rating-label{font-size:11px;font-weight:800;letter-spacing:1.4px}
+.rating{font-size:55px;letter-spacing:-2.5px}
+.kpis{gap:10px}
+.stat-card{
+    border-radius:17px!important;
+    background:linear-gradient(145deg,#101e2a,#0c1720)!important;
+    border:1px solid rgba(154,190,214,.13)!important;
+    padding:15px;
+}
+.stat-label{font-size:10px;font-weight:800;letter-spacing:.8px}
+.stat-value{font-size:25px;letter-spacing:-.6px}
+.stat-note{font-size:10px;color:#8195a5}
+.scouting-grid{gap:14px}
+.panel{
+    border-radius:20px!important;
+    background:linear-gradient(145deg,rgba(15,29,41,.98),rgba(10,20,29,.98))!important;
+    border:1px solid rgba(154,190,214,.13)!important;
+    box-shadow:var(--shadow)!important;
+}
+.panel-title{margin-bottom:13px}
+.panel-title h2{font-size:17px;font-weight:900;letter-spacing:-.25px}
+.panel-title span{font-size:10px}
+.action{
+    min-height:57px;
+    border-radius:14px;
+    padding:10px 12px;
+}
+.action-name{font-size:13px;font-weight:850}
+.action-help{font-size:10px}
+.action-icon{width:32px;height:32px;border-radius:10px}
+.action-count{width:29px;height:29px;min-width:29px}
+.action.positive{
+    background:linear-gradient(90deg,rgba(25,216,137,.12),rgba(25,216,137,.04));
+    border-color:rgba(25,216,137,.22);
+}
+.action.negative{
+    background:linear-gradient(90deg,rgba(255,83,100,.11),rgba(255,83,100,.035));
+    border-color:rgba(255,83,100,.20);
+}
+.dribble-box{
+    background:linear-gradient(135deg,rgba(77,163,255,.11),rgba(25,216,137,.07));
+    border:1px solid rgba(77,163,255,.16);
+    border-radius:16px!important;
+    padding:14px!important;
+}
+.dribble-percent{font-size:28px!important;font-weight:950!important}
+.progress{height:9px!important;border-radius:99px!important;background:#182735!important}
+.progress i{background:linear-gradient(90deg,#4da3ff,#19d889)!important;border-radius:99px!important}
+.summary-row{
+    min-height:40px;
+    padding:8px 3px!important;
+    border-bottom:1px solid rgba(154,190,214,.07)!important;
+}
+.summary-label{font-size:12px;color:#a8bac8}
+.summary-value{font-size:13px;font-weight:900}
+.event-section,.saved{margin-top:14px}
+.event-card,.saved-item{
+    background:rgba(255,255,255,.025)!important;
+    border:1px solid rgba(154,190,214,.09)!important;
+    border-radius:14px!important;
+}
+.empty{color:#8195a5}
+
+/* Analytics */
+.analytics-panel{margin-top:14px}
+.analytics-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:14px;
+}
+.analytics-card{
+    border:1px solid rgba(154,190,214,.11);
+    background:linear-gradient(145deg,#0e1c28,#0a1720);
+    border-radius:17px;
+    padding:16px;
+}
+.analytics-card h3{
+    margin:0 0 4px;
+    font-size:14px;
+    font-weight:900;
+}
+.analytics-sub{
+    margin-bottom:14px;
+    color:var(--muted);
+    font-size:10px;
+}
+.metric-row{
+    display:grid;
+    grid-template-columns:145px 1fr 45px;
+    align-items:center;
+    gap:9px;
+    margin:11px 0;
+}
+.metric-name{font-size:11px;color:#b7c6d1;font-weight:700}
+.metric-track{height:9px;background:#1a2a37;border-radius:99px;overflow:hidden}
+.metric-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#4da3ff,#19d889);transition:width .3s}
+.metric-fill.red{background:linear-gradient(90deg,#ff5364,#ff7b86)}
+.metric-value{text-align:right;font-weight:900;font-size:12px}
+.chart-wrap{height:185px;position:relative}
+.chart-svg{width:100%;height:100%;display:block;overflow:visible}
+.chart-grid-line{stroke:rgba(154,190,214,.10);stroke-width:1}
+.chart-line{fill:none;stroke:#19d889;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.chart-dot{fill:#19d889;stroke:#0b1822;stroke-width:3}
+.chart-label{fill:#7f94a4;font-size:9px}
+.chart-empty{height:100%;display:grid;place-items:center;color:#718797;font-size:11px}
+.accuracy-big{
+    display:flex;align-items:end;gap:8px;margin:2px 0 14px;
+}
+.accuracy-number{font-size:38px;font-weight:950;letter-spacing:-2px}
+.accuracy-unit{font-size:12px;color:var(--muted);padding-bottom:7px}
+.insight{
+    margin-top:13px;padding:11px 12px;border-radius:13px;
+    background:rgba(77,163,255,.07);
+    border:1px solid rgba(77,163,255,.12);
+    color:#b9c9d6;font-size:11px;line-height:1.45;
+}
+.insight strong{color:#f2f7fb}
+
+/* better typography */
+input,select{font-size:16px!important}
+.field label{font-size:11px}
+.setup-title{letter-spacing:-.8px}
+@media(max-width:900px){
+    .scouting-grid{grid-template-columns:1fr 1fr}
+    .summary-panel{grid-column:1 / -1}
+    .analytics-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+    header{padding:11px 12px}
+    main{padding:12px!important}
+    .header-inner{gap:10px}
+    .logo{width:43px;height:43px}
+    h1{font-size:18px}
+    .subtitle{font-size:10px}
+    .header-actions{gap:6px}
+    .header-actions .btn{padding:8px 10px;min-height:38px;font-size:11px}
+    .player-top{grid-template-columns:1fr}
+    .player-card{min-height:104px;padding:15px;border-radius:18px!important}
+    .player-avatar{width:65px;height:65px;font-size:23px}
+    .player-name{font-size:22px}
+    .rating-box{min-width:0;padding:14px}
+    .rating{font-size:43px}
+    .kpis{grid-template-columns:repeat(2,1fr);gap:8px}
+    .stat-card{padding:12px;border-radius:14px!important}
+    .stat-value{font-size:22px}
+    .scouting-grid{grid-template-columns:1fr;gap:10px}
+    .summary-panel{grid-column:auto}
+    .panel{padding:13px;border-radius:17px!important}
+    .action{min-height:51px;padding:8px 10px}
+    .action-name{font-size:12px}
+    .action-help{font-size:9px}
+    .metric-row{grid-template-columns:105px 1fr 40px;gap:7px}
+    .analytics-card{padding:13px}
+    .chart-wrap{height:170px}
+}
+
+/* KPI NUMBERS - HIGH CONTRAST */
+.stat-card .stat-value,
+.kpis .stat-value,
+#kpiPass, #kpiDribble, #kpiDuels, #kpiKey, #kpiGA, #kpiActions {
+    color:#ffffff !important;
+    -webkit-text-fill-color:#ffffff !important;
+    font-weight:900 !important;
+    opacity:1 !important;
+    text-shadow:0 1px 3px rgba(0,0,0,.45);
+}
+
 </style>
+
+
 </head>
 <body>
 
@@ -923,6 +1362,10 @@ button {
         </p>
 
         <div class="form-grid">
+            <div class="field">
+                <label>NÁZOV ULOŽENÉHO ZÁZNAMU</label>
+                <input id="saveName" type="text" placeholder="Napr. Martin Šimek – zápas 1">
+            </div>
             <div class="field">
                 <label>MENO HRÁČA</label>
                 <input id="playerName" type="text" placeholder="Napr. Martin Šimek">
@@ -1051,6 +1494,45 @@ button {
         </div>
     </div>
 
+
+    <div class="panel analytics-panel">
+        <div class="panel-title">
+            <h2>📈 Analýza výkonu</h2>
+            <span>aktualizuje sa po každej akcii</span>
+        </div>
+
+        <div class="analytics-grid">
+            <div class="analytics-card">
+                <h3>Presnosť prihrávok</h3>
+                <div class="analytics-sub">koľko prihrávok bolo úspešných z celkového počtu</div>
+                <div class="accuracy-big">
+                    <div class="accuracy-number" id="passAccuracyBig">0</div>
+                    <div class="accuracy-unit">%</div>
+                </div>
+                <div id="passMetrics"></div>
+                <div class="insight" id="passInsight">Zatiaľ nemáš zaznamenanú žiadnu prihrávku.</div>
+            </div>
+
+            <div class="analytics-card">
+                <h3>Vývoj ratingu</h3>
+                <div class="analytics-sub">priebežný rating počas scoutingu</div>
+                <div class="chart-wrap" id="ratingChart"></div>
+            </div>
+
+            <div class="analytics-card">
+                <h3>Úspešnosť jednotlivých činností</h3>
+                <div class="analytics-sub">porovnanie najdôležitejších súbojových akcií</div>
+                <div id="successMetrics"></div>
+            </div>
+
+            <div class="analytics-card">
+                <h3>Útočný prínos</h3>
+                <div class="analytics-sub">góly, asistencie, strely a vytvorené šance</div>
+                <div id="attackMetrics"></div>
+            </div>
+        </div>
+    </div>
+
     <div class="panel event-section">
         <div class="panel-title">
             <h2>📝 Záznam akcií</h2>
@@ -1144,6 +1626,7 @@ let player = {
 let stats = {};
 let events = [];
 let matchStarted = false;
+let saveName = "";
 
 function emptyStats(){
     const obj = {};
@@ -1158,11 +1641,11 @@ function resetState(){
 
 function esc(value){
     return String(value ?? "")
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;")
-        .replaceAll('"',"&quot;")
-        .replaceAll("'","&#039;");
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
 }
 
 function getInitials(name){
@@ -1187,10 +1670,17 @@ function positionName(pos){
 }
 
 function startMatch(){
+    const saveNameInput = document.getElementById("saveName").value.trim();
     const name = document.getElementById("playerName").value.trim();
     const position = document.getElementById("playerPosition").value;
     const height = Number(document.getElementById("playerHeight").value);
     const weight = Number(document.getElementById("playerWeight").value);
+
+    if(!saveNameInput){
+        showToast("Zadaj názov, pod ktorým sa má scouting uložiť.");
+        document.getElementById("saveName").focus();
+        return;
+    }
 
     if(!name){
         showToast("Zadaj meno hráča.");
@@ -1198,7 +1688,8 @@ function startMatch(){
         return;
     }
 
-    player = {name,position,height,weight};
+    saveName = saveNameInput;
+    player = {name,position,height,weight,saveName};
     resetState();
     matchStarted = true;
 
@@ -1367,15 +1858,24 @@ function getRating(){
 
     const position = player.position;
 
-    r += stats.successfulPass * 0.012;
-    r += stats.keyPass * 0.085;
-    r += stats.wonDuel * 0.035;
-    r += stats.successfulTackle * 0.045;
-    r += stats.successfulDribble * 0.040;
-    r += stats.beatOpponent * 0.050;
-    r += stats.shotOnTarget * 0.055;
-    r += stats.goal * 0.400;
-    r += stats.assist * 0.300;
+    r += stats.successfulPass * 0.048;
+    r += stats.keyPass * 0.115;
+    r += stats.wonDuel * 0.065;
+    r += stats.successfulTackle * 0.075;
+    r += stats.successfulDribble * 0.070;
+    r += stats.beatOpponent * 0.080;
+    r += stats.shotOnTarget * 0.085;
+    // Góly majú rastúcu hodnotu: ďalší gól je stále veľký bonus,
+    // ale zároveň sa celkový rating drží v rozumnom rozsahu.
+    const goalBonus = stats.goal <= 0
+        ? 0
+        : stats.goal === 1
+            ? 0.63
+            : stats.goal === 2
+                ? 1.43
+                : 2.43 + Math.max(0, stats.goal - 3) * 0.88;
+    r += goalBonus;
+    r += stats.assist * 0.330;
 
     r -= stats.failedPass * 0.025;
     r -= stats.lostBall * 0.045;
@@ -1508,8 +2008,108 @@ function updateUI(){
     document.getElementById("dribbleBar").style.width = dribblePct + "%";
 
     renderSummary();
+    renderAnalytics();
     document.getElementById("eventCount").textContent =
         events.length + (events.length === 1 ? " udalosť" : " udalostí");
+}
+
+
+function renderAnalytics(){
+    const passTotal = getTotalPasses();
+    const passPct = getPassPercentage();
+
+    const passBig = document.getElementById("passAccuracyBig");
+    if(passBig) passBig.textContent = passPct;
+
+    const passMetrics = document.getElementById("passMetrics");
+    if(passMetrics){
+        passMetrics.innerHTML = [
+            ["Úspešné", stats.successfulPass, "green"],
+            ["Neúspešné", stats.failedPass, "red"]
+        ].map(row => `
+            <div class="metric-row">
+                <div class="metric-name">${row[0]}</div>
+                <div class="metric-track"><div class="metric-fill ${row[2]==="red"?"red":""}" style="width:${passTotal ? (row[1]/passTotal*100) : 0}%"></div></div>
+                <div class="metric-value">${row[1]}</div>
+            </div>
+        `).join("");
+    }
+
+    const successMetrics = document.getElementById("successMetrics");
+    if(successMetrics){
+        const metrics = [
+            ["Prihrávky", getPassPercentage()],
+            ["Súboje", getDuelPercentage()],
+            ["Dribling", getDribblePercentage()]
+        ];
+        successMetrics.innerHTML = metrics.map(([name,val]) => `
+            <div class="metric-row">
+                <div class="metric-name">${name}</div>
+                <div class="metric-track"><div class="metric-fill" style="width:${val}%"></div></div>
+                <div class="metric-value">${val}%</div>
+            </div>
+        `).join("");
+    }
+
+    const attackMetrics = document.getElementById("attackMetrics");
+    if(attackMetrics){
+        const shots = stats.shotOnTarget + stats.missedShot;
+        const shotPct = shots ? Math.round(stats.shotOnTarget / shots * 100) : 0;
+        const chances = stats.keyPass + stats.assist;
+        const metrics = [
+            ["Góly", stats.goal, Math.min(100, stats.goal * 25)],
+            ["Asistencie", stats.assist, Math.min(100, stats.assist * 25)],
+            ["Strely na bránu", stats.shotOnTarget, shotPct]
+        ];
+        attackMetrics.innerHTML = metrics.map(([name,val,pct]) => `
+            <div class="metric-row">
+                <div class="metric-name">${name}</div>
+                <div class="metric-track"><div class="metric-fill" style="width:${pct}%"></div></div>
+                <div class="metric-value">${val}</div>
+            </div>
+        `).join("") + `
+            <div class="insight"><strong>${chances}</strong> priamych tvorivých akcií
+            (kľúčové prihrávky + asistencie).</div>
+        `;
+    }
+
+    const chart = document.getElementById("ratingChart");
+    if(chart){
+        if(!events.length){
+            chart.innerHTML = '<div class="chart-empty">Graf sa začne zobrazovať po prvej zaznamenanej akcii.</div>';
+        }else{
+            // Prehráme udalosti od začiatku a vypočítame rating po každej akcii.
+            const savedStats = {...stats};
+            const points = [{label:"0",value:6}];
+            const replay = {};
+            Object.keys(savedStats).forEach(k => replay[k]=0);
+
+            events.forEach((event,i)=>{
+                replay[event.id] = (replay[event.id] || 0) + 1;
+                const old = stats;
+                stats = replay;
+                const value = getRating();
+                stats = old;
+                points.push({label:String(i+1),value});
+            });
+
+            const w=520,h=180,padL=26,padR=10,padT=12,padB=24;
+            const vals=points.map(p=>p.value);
+            const min=Math.min(5.5,...vals)-0.1;
+            const max=Math.max(6.5,...vals)+0.1;
+            const range=Math.max(.5,max-min);
+            const x=i=>padL+(i/(Math.max(1,points.length-1)))*(w-padL-padR);
+            const y=v=>padT+(1-(v-min)/range)*(h-padT-padB);
+            const path=points.map((p,i)=>`${i?"L":"M"} ${x(i).toFixed(1)} ${y(p.value).toFixed(1)}`).join(" ");
+            const dots=points.filter((p,i)=>i===0 || i===points.length-1 || i%Math.max(1,Math.floor(points.length/6))===0)
+                .map((p,i)=>`<circle class="chart-dot" cx="${x(points.indexOf(p)).toFixed(1)}" cy="${y(p.value).toFixed(1)}" r="4"></circle>`).join("");
+            const grid=[min,(min+max)/2,max].map(v=>`
+                <line class="chart-grid-line" x1="${padL}" x2="${w-padR}" y1="${y(v)}" y2="${y(v)}"></line>
+                <text class="chart-label" x="2" y="${y(v)+3}">${v.toFixed(1)}</text>
+            `).join("");
+            chart.innerHTML=`<svg class="chart-svg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">${grid}<path class="chart-line" d="${path}"></path>${dots}</svg>`;
+        }
+    }
 }
 
 function renderSummary(){
@@ -1571,14 +2171,22 @@ function renderEvents(){
 
 function getStorage(){
     try{
-        return JSON.parse(localStorage.getItem("footballScoutMatches") || "[]");
-    }catch{
+        const raw = window.localStorage.getItem("footballScoutMatches");
+        const data = raw ? JSON.parse(raw) : [];
+        return Array.isArray(data) ? data : [];
+    }catch(error){
         return [];
     }
 }
 
 function setStorage(data){
-    localStorage.setItem("footballScoutMatches",JSON.stringify(data));
+    try{
+        window.localStorage.setItem("footballScoutMatches",JSON.stringify(data));
+        return true;
+    }catch(error){
+        showToast("Zápas funguje, ale uloženie nie je v tomto prehliadači dostupné.");
+        return false;
+    }
 }
 
 function saveCurrent(){
@@ -1590,7 +2198,8 @@ function saveCurrent(){
     const data = getStorage();
     const item = {
         id:Date.now(),
-        name:player.name,
+        name:saveName || player.saveName || player.name,
+        saveName:saveName || player.saveName || player.name,
         player:{...player},
         stats:{...stats},
         events:[...events],
@@ -1616,6 +2225,8 @@ function loadMatch(id){
     }
 
     player = {...item.player};
+    saveName = item.saveName || item.player?.saveName || item.name || player.name;
+    player.saveName = saveName;
     stats = {...item.stats};
     events = Array.isArray(item.events) ? [...item.events] : [];
     matchStarted = true;
@@ -1716,23 +2327,40 @@ function showToast(message){
 }
 
 function newMatch(){
-    if(matchStarted && events.length){
-        const ok = confirm("Naozaj chceš začať nový scouting? Aktuálny zápas zostane zachovaný iba ak si ho už uložil.");
-        if(!ok) return;
-    }
-
+    // Vždy bezpečne spusti úplne nový scouting.
+    // Uložené zápasy v localStorage zostávajú nedotknuté.
     matchStarted = false;
     resetState();
 
-    document.getElementById("scoutScreen").classList.add("hidden");
-    document.getElementById("setupScreen").classList.remove("hidden");
+    player = {
+        name:"",
+        position:"CM",
+        height:0,
+        weight:0,
+        saveName:""
+    };
+    saveName = "";
 
-    document.getElementById("playerName").value = "";
-    document.getElementById("playerHeight").value = "";
-    document.getElementById("playerWeight").value = "";
-    document.getElementById("playerPosition").value = "CM";
+    const setup = document.getElementById("setupScreen");
+    const scout = document.getElementById("scoutScreen");
+    if(setup) setup.classList.remove("hidden");
+    if(scout) scout.classList.add("hidden");
 
+    const saveNameEl = document.getElementById("saveName");
+    const playerNameEl = document.getElementById("playerName");
+    const heightEl = document.getElementById("playerHeight");
+    const weightEl = document.getElementById("playerWeight");
+    const positionEl = document.getElementById("playerPosition");
+
+    if(saveNameEl) saveNameEl.value = "";
+    if(playerNameEl) playerNameEl.value = "";
+    if(heightEl) heightEl.value = "";
+    if(weightEl) weightEl.value = "";
+    if(positionEl) positionEl.value = "CM";
+
+    renderSavedList();
     window.scrollTo({top:0,behavior:"smooth"});
+    showToast("Pripravený nový zápas.");
 }
 
 /* Klávesové skratky:
@@ -1793,5 +2421,12 @@ resetState();
 renderSavedList();
 </script>
 
+
+<div class="mobile-nav">
+  <button class="active" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span>⌂</span>Skauting</button>
+  <button type="button" onclick="showSaved()"><span>▣</span>Zápasy</button>
+  <button type="button" onclick="showHelp()"><span>?</span>Pomoc</button>
+  <button type="button" onclick="newMatch()"><span>＋</span>Nový</button>
+</div>
 </body>
 </html>
